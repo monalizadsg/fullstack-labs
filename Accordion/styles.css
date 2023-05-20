@@ -1,0 +1,26 @@
+.accordion-container {
+  width: 60%;
+  margin: 20px auto;
+}
+
+.accordion-header {
+  background-color: rgb(243, 237, 237);
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.accordion-header button {
+  float: right;
+}
+
+.accordion-body {
+  background-color: white;
+  border: 1px solid rgb(243, 237, 237);
+  padding: 20px;
+  display: none;
+}
+
+.accordion.active .accordion-body {
+  display: block;
+}

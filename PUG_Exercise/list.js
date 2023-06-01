@@ -24,7 +24,13 @@ songs = [
 app.set("view engine", "pug");
 
 app.get("/", (req, res) => {
-  res.render("list");
+  res.render("list", { songs: songs });
+});
+
+app.post("/", (req, res) => {
+  let songTitle = req.body.songTitle;
+  if (songTitle) songs.push(songTitle);
+  res.render("list", { songs: songs });
 });
 
 // Start the server
